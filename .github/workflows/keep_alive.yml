@@ -1,15 +1,15 @@
-name: Keep ScreenerPro Awake
+name: Keep ScreenerPro Sites Awake
 
 on:
   schedule:
     - cron: "*/45 * * * *"  # Every 45 minutes
-  workflow_dispatch:        # Allows manual trigger
+  workflow_dispatch:
 
 jobs:
-  ping:
+  keepalive:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v3
 
       - name: Set up Python
