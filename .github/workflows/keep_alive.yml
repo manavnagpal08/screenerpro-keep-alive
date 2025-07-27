@@ -17,5 +17,8 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Install requests module
+        run: pip install requests
+
       - name: Run keep_alive.py
         run: python keep_alive.py
